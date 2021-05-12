@@ -1,0 +1,48 @@
+header{
+  background-color: white;
+ .header-top{
+   height: 40px;
+   border-bottom: 1px solid #3CB371;
+   text-align: right;
+   line-height: 40px;
+   font-size: 12px;
+   .user-name{
+    margin:0 4px;
+  }
+  .quit{
+    font-size: 12px;
+  }
+ }
+ .header-bottom{
+   height: 40px;
+   display: flex;
+   line-height: 40px;
+  .header-bottom-left{
+    width: 25%;
+    text-align: center;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+    &::after{
+      z-index: 1;
+      position: absolute;
+      content: '';
+      border-top:25px solid white;
+      border-left:25px solid transparent;
+      border-right:25px solid transparent;
+      border-bottom:25px solid transparent;
+      left: 50%;
+      transform: translateX(-50%);
+      top:30px;
+    }
+  }  
+  .header-bottom-right{
+    width: 75%;
+    text-align: right;
+    padding-right: 20px;
+    .weather{
+      font-size: 10px;
+    }
+  } 
+ }
+}
